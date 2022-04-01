@@ -4,7 +4,7 @@ class Java02{
     public static void main(String[] args){
         Scanner in = new Scanner(System.in);
         
-        //料金の配列を作る500個
+        //料金の配列を作る20個
         int[] prices = new int[20];
         for(int i = 0; i < prices.length; i++){
             prices[i] = ((int)(Math.random() * 900) + 100) * 10;
