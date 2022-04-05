@@ -35,5 +35,7 @@ public class Java10 {
         }else{
             System.out.println("間");
         }
+        
+        in.close();
     }
 }
