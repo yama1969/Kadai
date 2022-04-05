@@ -1,8 +1,8 @@
-package Java07;
+package Java08;
 
 import java.util.Scanner;
 
-public class Java07 {
+public class ItemSearch {
     public static void main(String[] args){
         Scanner in = new Scanner(System.in);
         
