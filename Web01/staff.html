@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>注文検索：書籍注文システム</title>
+</head>
+<body>
+  <h1>書籍販売システム － 店員専用</h1>
+  <h2>注文検索</h2>
+  <p>
+    検索する注文の情報を入力してください。<br>
+    省略する項目は空欄のままで結構です。
+  </p>
+  <p>注文番号：<input type="text" name="orderno"></p>
+  <p>
+    注文日 自：
+    <input type="text" name="startyear">年
+    <input type="text" name="startmonth">月
+    <input type="text" name="startday">日
+  </p>
+  <p>
+    注文日 至：
+    <input type="text" name="endyear">年
+    <input type="text" name="endmonth">月
+    <input type="text" name="endday">日
+  </p>
+  <p>購入者氏名(部分可)：<input type="text" name="custname"></p>
+  <p>購入者電話番号：<input type="text" name="tel"></p>
+  <p>
+    商品名(部分可)：<input type="text" name="itemname">
+    <button type="submit">検索実行</button>
+  </p>
+  <p><button type="submit">トップへ戻る</button></p>
+</body>
+</html>
