@@ -12,7 +12,7 @@
 <head>
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
-    <title>課題Server03</title>
+    <title>課題Server05</title>
 </head>
 <body>
     <h1>JSPからJavaクラスを利用する</h1>
