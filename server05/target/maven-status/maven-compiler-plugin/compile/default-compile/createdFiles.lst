@@ -1,4 +1,0 @@
-exceptions\EmptyItemsConditionException.class
-model\ItemsManager.class
-exceptions\NoItemsException.class
-beans\Item.class
