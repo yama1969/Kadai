@@ -27,10 +27,10 @@ public class ItemDataAccessor {
             throw new CannotSearchItemsException("商品検索ができませんでした");
         }
         try(Connection db = ds.getConnection()){
-            PreparedStatement ps = db.prepareStatement("SELECT code, name, price FROM items WHERE  name LIKE ? AND name LIKE ? AND price LIKE ? ORDER BY code");
+            PreparedStatement ps = db.prepareStatement("SELECT code, name, price FROM items WHERE code LIKE ? AND name LIKE ? AND price LIKE ? ORDER BY code");
             setFolder(ps, 1, key.getCode());
             setFolder(ps, 2, key.getName());
-            setFolder(ps, 3, "" + key.getPrice());
+            setFolder(ps, 3, key.getPrice());
             ResultSet rs = ps.executeQuery();
             while(rs.next()){
                 Item item = new Item(rs.getString("code"), rs.getString("name"), rs.getInt("price"));
@@ -50,4 +50,12 @@ public class ItemDataAccessor {
             ps.setString(no,"%");
         }
     }
+
+    private void setFolder(PreparedStatement ps, int no, int dat) throws SQLException{
+        String key = null;
+        if(dat != 0){
+            key = "" + dat;
+        }
+        setFolder(ps, no, key);
+    } 
 }
