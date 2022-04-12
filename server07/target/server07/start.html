@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <title>商品検索：書籍注文システム</title>
+</head>
+<body>
+  <section id="contents">
+    <h1>書籍販売システム</h1>
+    <h2>商品検索</h2>
+    <p>
+      検索する書籍名を入力してください。書籍名の一部分でも検索できます。<br>
+    </p>
+    <form id="searchform" class="input" action="itemList.jsp" method="post">
+      書籍名：<input type="text" name="itemname"><button id="search" type="button">検索</button>
+    </form>
+    <form class="input" action="staff.html"><button type="button">店員メニュー</button></form>
+  </section>
+  <script>
+    document.getElementById("search").addEventListener('click', function(){
+      var box = document.getElementsByTagName("input");
+      var empty = 1;
+      for(var i = 0; i < box.length; i++){
+        if(box[i].value != ""){
+          empty = 0;
+        }
+      }
+      
+      if(empty == 1){
+        window.alert("1つも入力されていません");
+      }else{
+        document.getElementById("searchform").submit();
+      }
+    });
+  </script>
+</body>
+</html>

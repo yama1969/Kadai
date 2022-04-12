@@ -1,0 +1,7 @@
+controller\ItemSearch.class
+exceptions\EmptyItemsConditionException.class
+model\ItemsManager.class
+exceptions\CannotSearchItemsException.class
+beans\Item.class
+dao\ItemDataAccessor.class
+exceptions\NoItemsException.class
