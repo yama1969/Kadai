@@ -18,7 +18,9 @@
     <title>課題Server03</title>
 </head>
 <body>
-    <h1>データベース接続</h1>
+    <section id="contents">
+
+        <h1>データベース接続</h1>
 <%
     Context context = new InitialContext();
     DataSource ds = (DataSource)context.lookup("java:comp/env/jdbc/goodsorder");
@@ -27,20 +29,21 @@
         ps.setString(1, "%" + key + "%");
         ResultSet rs = ps.executeQuery();
 %>
-    <table>
-        <tr><th>商品コード</th><th>商品名</th><th>価格</th></tr>
+        <table>
+            <tr><th>商品コード</th><th>商品名</th><th>価格</th></tr>
 <%
         while(rs.next()){
 %>
-        <tr>
-            <td><%=rs.getString("code")%></td>
-            <td><%=rs.getString("name")%></td>
-            <td><%=rs.getInt("price")%></td>
-        </tr>
+            <tr>
+                <td><%=rs.getString("code")%></td>
+                <td><%=rs.getString("name")%></td>
+                <td><%=rs.getInt("price")%></td>
+            </tr>
 <%
         }
     }
 %>
-    </table>        
+        </table>
+    </section>
 </body>
 </html>

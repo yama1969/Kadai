@@ -13,6 +13,14 @@
 <section id="contents">
   <h1>書籍販売システム</h1>
   <h2>商品一覧</h2>
+<%
+String message = (String)request.getAttribute("message");
+if(message != null && !message.equals("")){
+%>
+  <p class="message"><%=message %></p>
+<%  
+}
+%>
   <table>
     <tr>
       <th>番号</th><th>書籍名</th><th>価格</th><th>注文</th>

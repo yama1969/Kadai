@@ -14,7 +14,7 @@
 String message = (String)request.getAttribute("message");
 if(message != null && !message.equals("")){
 %>
-  <p><%=message %></p>
+  <p class="message"><%=message %></p>
 <%    
 }
 %>

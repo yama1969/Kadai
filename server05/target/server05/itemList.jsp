@@ -15,25 +15,27 @@
     <title>課題Server05</title>
 </head>
 <body>
-    <h1>JSPからJavaクラスを利用する</h1>
+    <section id="contents">
+        <h1>JSPからJavaクラスを利用する</h1>
 <%
     ItemsManager im = new ItemsManager();
     Item keyitem = new Item(null, key, 0);
     ArrayList<Item> list = im.search(keyitem);
 %>
-    <table>
-        <tr><th>商品コード</th><th>商品名</th><th>価格</th></tr>
+        <table>
+            <tr><th>商品コード</th><th>商品名</th><th>価格</th></tr>
 <%
     for(Item item : list){
 %>
-        <tr>
-            <td><%=item.getCode()%></td>
-            <td><%=item.getName()%></td>
-            <td><%=item.getPrice()%></td>
-        </tr>
+            <tr>
+                <td><%=item.getCode()%></td>
+                <td><%=item.getName()%></td>
+                <td><%=item.getPrice()%></td>
+            </tr>
 <%
     }
 %>
-    </table>        
+        </table>        
+    </section>
 </body>
 </html>

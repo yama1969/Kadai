@@ -44,3 +44,10 @@ p {
 table, th, td {
   border : 0.07em solid #000;
 }
+
+.message {
+  margin : 2em 0;
+  font-size : 1.3em;
+  font-weight : bold;
+  color       : red;
+}

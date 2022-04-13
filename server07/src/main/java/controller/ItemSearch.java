@@ -59,7 +59,7 @@ public class ItemSearch extends HttpServlet{
         out.println("<section id=\"contents\">");
         out.println("  <h1>書籍販売システム</h1>");
         out.println("  <h2>商品検索</h2>");
-        out.println("  <p>" + message + "</p>");
+        out.println("  <p class=\"message\">" + message + "</p>");
         out.println("  <p>検索する書籍名を入力してください。書籍名の一部分でも検索できます。</p>");
         out.println("  <form id=\"searchform\" class=\"input\" action=\"itemList.html\" method=\"post\">");
         out.println("    書籍名：<input type=\"text\" name=\"itemname\"><button id=\"search\" type=\"button\">検索</button>");
